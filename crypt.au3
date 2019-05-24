@@ -2,11 +2,17 @@
 #AutoIt3Wrapper_Run_Au3Stripper=y
 #Au3Stripper_Parameters=/pe /sf /sv /mo  /rm
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
+#RequireAdmin
 #include-once
 #include <Crypt.au3>
 #include <File.au3>
 #include <Date.au3>
 #include <MsgBoxConstants.au3>
+
+If IsAdmin() = False Then
+    MsgBox($MB_SYSTEMMODAL, "Error", "Les droits d'administrateur sont requis.")
+EndIf
+
 
 Local $sDrive = "", $sDir = "", $sFileName = "", $sExtension = ""
 Local $aPathSplit = _PathSplit(@ScriptFullPath, $sDrive, $sDir, $sFileName, $sExtension)
