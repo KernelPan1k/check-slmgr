@@ -1,3 +1,7 @@
+#Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#AutoIt3Wrapper_Run_Au3Stripper=y
+#Au3Stripper_Parameters=/pe /sf /sv /mo  /rm
+#EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #include <ComboConstants.au3>
 #include <Crypt.au3>
 #include <GUIConstantsEx.au3>
@@ -9,7 +13,7 @@ Local $hGUI = GUICreate("Decrypter fichier", 200, 80)
 Local $idSourceBrowse = GUICtrlCreateButton("Chercher fichier", 10, 5, 180, 25)
 Local $idDecrypt = GUICtrlCreateButton("Decrypt", 10, 40, 180, 25)
 Local $sDestinationRead = @DesktopDir & "\slmgr-decrypted.txt"
-Local $sPasswordRead = "iherwfoiherghoterhvtrgtrgtrgtrgtrgoterhgoterhgoterh"
+Local $sPasswordRead = "complete me"
 Local $sSourceRead = ""
 Local $iMsg
 
@@ -24,8 +28,6 @@ Do
 				ContinueLoop
 			EndIf
 		Case $idDecrypt
-			MsgBox(0, "", $sSourceRead)
-
 			If StringStripWS($sSourceRead, $STR_STRIPALL) <> "" And _
 					StringStripWS($sDestinationRead, $STR_STRIPALL) <> "" And _
 					StringStripWS($sPasswordRead, $STR_STRIPALL) <> "" And _
@@ -56,4 +58,4 @@ Do
 Until $iMsg = $GUI_EVENT_CLOSE
 
 GUIDelete($hGUI)
-Exit(0)
+Exit (0)

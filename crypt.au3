@@ -1,3 +1,7 @@
+#Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#AutoIt3Wrapper_Run_Au3Stripper=y
+#Au3Stripper_Parameters=/pe /sf /sv /mo  /rm
+#EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #include-once
 #include <Crypt.au3>
 #include <File.au3>
@@ -9,7 +13,7 @@ Local $aPathSplit = _PathSplit(@ScriptFullPath, $sDrive, $sDir, $sFileName, $sEx
 Local Const $sSourceFileName = $sFileName & "-" & @YEAR & @MON & @MDAY & @HOUR & @MIN & ".txt"
 Local Const $sSource = @TempDir & "\" & $sSourceFileName
 Local Const $sDest = @DesktopDir & "\" & $sSourceFileName
-Local Const $sPassword = "iherwfoiherghoterhvtrgtrgtrgtrgtrgoterhgoterhgoterh"
+Local Const $sPassword = "complete me"
 Local Const $iAlgorithm = $CALG_AES_256
 
 FileWrite($sSource, "Run at " & _Now() & @CRLF)
