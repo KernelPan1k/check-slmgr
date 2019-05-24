@@ -10,7 +10,8 @@
 #include <MsgBoxConstants.au3>
 
 If IsAdmin() = False Then
-    MsgBox($MB_SYSTEMMODAL, "Error", "Les droits d'administrateur sont requis.")
+	MsgBox($MB_SYSTEMMODAL, "Error", "Les droits d'administrateur sont requis.")
+	Exit (1)
 EndIf
 
 
